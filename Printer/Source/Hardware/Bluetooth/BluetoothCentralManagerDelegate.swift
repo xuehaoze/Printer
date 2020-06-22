@@ -125,7 +125,9 @@ class BluetoothCentralManagerDelegate: NSObject, CBCentralManagerDelegate {
     }
 
     public func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
-
+        // remove saved uuid after disconnect
+        UserDefaults.standard.removeObject(forKey: UserDefaultKey.autoConectUUID)
+        UserDefaults.standard.synchronize()
         centralManagerDidDisConnectPeripheralWithError?(central, peripheral, error)
     }
 }
