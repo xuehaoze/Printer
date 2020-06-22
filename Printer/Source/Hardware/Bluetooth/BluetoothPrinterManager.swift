@@ -15,9 +15,10 @@ public extension String {
     }
 }
 
-private extension CBPeripheral {
+public extension CBPeripheral {
 
-    var printerState: BluetoothPrinter.State {
+    var printerState:BluetoothPrinter.State {
+        
         switch state {
         case .disconnected:
             return .disconnected
@@ -35,12 +36,15 @@ private extension CBPeripheral {
 
 public struct BluetoothPrinter {
 
+    // Acrossor: add a new state: unavailable to indicate the printer is not available
+    // Either connected to other devices or connection time out
     public enum State {
 
         case disconnected
         case connecting
         case connected
         case disconnecting
+        case unavailable
     }
 
     public let name: String?
@@ -235,7 +239,10 @@ public class BluetoothPrinterManager {
         }
 
         var printer = BluetoothPrinter(p)
-        printer.state = .disconnected
+        
+        // Acrossor: change printer state to unavailable to indecate connection failed
+//        printer.state = .disconnected
+        printer.state = .unavailable
         nearbyPrinterDidChange(.update(printer))
 
         centralManager.cancelPeripheralConnection(p)

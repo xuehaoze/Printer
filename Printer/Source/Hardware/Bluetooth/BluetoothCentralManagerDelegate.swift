@@ -84,7 +84,7 @@ class BluetoothCentralManagerDelegate: NSObject, CBCentralManagerDelegate {
 
         guard let serviceUUIDs = advertisementData[CBAdvertisementDataServiceUUIDsKey] as? [CBUUID],
             let isConnectable = advertisementData[CBAdvertisementDataIsConnectable] as? NSNumber,
-            serviceUUIDs.count > 0, isConnectable == 1 else {
+            serviceUUIDs.count > 0 else {
                 return
         }
 
