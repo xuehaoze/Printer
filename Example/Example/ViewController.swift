@@ -17,7 +17,7 @@ class ViewController: UIViewController {
  
     @IBAction func touchPrint(sender: UIButton) {
 
-        guard let image = UIImage(named: "demo") else {
+        guard let image = UIImage(named: "receipt_logo") else {
             return
         }
 
@@ -26,25 +26,23 @@ class ViewController: UIViewController {
             .title("Restaurant"),
             .blank,
             
-//            .plainText("Palo Alto Californlia 94301"),
-//            .plainText("378-0987893742"),
-//            .blank,
-//            .image(image, attributes: .alignment(.center)),
-//            .text(.init(content: Date().description, predefined: .alignment(.center))),
-//            .blank,
-//            .kv(k: "Merchant ID:", v: "iceu1390"),
-//            .kv(k: "Terminal ID:", v: "29383"),
-//            .blank,
-//            .kv(k: "Transaction ID:", v: "0x000321"),
-//            .plainText("PURCHASE"),
-//            .blank,
-//            .kv(k: "Sub Total", v: "USD$ 25.09"),
-//            .kv(k: "Tip", v: "3.78"),
-//            .dividing,
-//            .kv(k: "Total", v: "USD$ 28.87"),
-//            .blank(3),
-            Block(Text(content: "Thanks for supporting", predefined: .alignment(.center))),
-            Block(Text(content: "Thanks for supporting", predefined: .alignment(.center))),
+            .plainText("Palo Alto Californlia 94301"),
+            .plainText("378-0987893742"),
+            .blank,
+            .image(image, attributes: .alignment(.center)),
+            .text(.init(content: Date().description, predefined: .alignment(.center))),
+            .blank,
+            .kv(k: "Merchant ID:", v: "iceu1390"),
+            .kv(k: "Terminal ID:", v: "29383"),
+            .blank,
+            .kv(k: "Transaction ID:", v: "0x000321"),
+            .plainText("PURCHASE"),
+            .blank,
+            .kv(k: "Sub Total", v: "USD$ 25.09"),
+            .kv(k: "Tip", v: "3.78"),
+            .dividing,
+            .kv(k: "Total", v: "USD$ 28.87"),
+            .blank(3),
             Block(Text(content: "Thanks for supporting", predefined: .alignment(.center))),
             .cut
         )

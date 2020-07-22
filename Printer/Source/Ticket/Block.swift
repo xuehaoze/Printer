@@ -50,12 +50,12 @@ public extension Block {
         return Block(QRCode(content))
     }
     
-    // title
+    /// title: the same with: Text(content: content, predefined: .alignment(.center), .scale(.l1))
     static func title(_ content: String) -> Block {
         return Block(Text.title(content))
     }
     
-    // plain text
+    /// plain text: the same with: Text(content: content, predefined: .alignment(.left), .scale(.l0))
     static func plainText(_ content: String) -> Block {
         return Block(Text.init(content))
     }
