@@ -39,6 +39,8 @@ public extension Block {
     // blank line
     static var blank = Block(Blank())
     
+    static var cut = Block(Cut())
+    
     static func blank(_ line: UInt8) -> Block {
         return Block(Blank(), feedPoints: Block.defaultFeedPoints * line)
     }

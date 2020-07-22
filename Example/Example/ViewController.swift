@@ -22,8 +22,10 @@ class ViewController: UIViewController {
         }
 
         var ticket = Ticket(
+            .blank,
             .title("Restaurant"),
             .blank,
+            
 //            .plainText("Palo Alto Californlia 94301"),
 //            .plainText("378-0987893742"),
 //            .blank,
@@ -42,17 +44,19 @@ class ViewController: UIViewController {
 //            .kv(k: "Total", v: "USD$ 28.87"),
 //            .blank(3),
             Block(Text(content: "Thanks for supporting", predefined: .alignment(.center))),
-            .blank
+            Block(Text(content: "Thanks for supporting", predefined: .alignment(.center))),
+            Block(Text(content: "Thanks for supporting", predefined: .alignment(.center))),
+            .cut
         )
         
-        ticket.feedLinesOnHead = 2
-        ticket.feedLinesOnTail = 3
+        ticket.feedLinesOnHead = 0
+        ticket.feedLinesOnTail = 0
         
         if bluetoothPrinterManager.canPrint {
             bluetoothPrinterManager.print(ticket)
         }
         
-        dummyPrinter.print(ticket)
+//        dummyPrinter.print(ticket)
         
     }
     

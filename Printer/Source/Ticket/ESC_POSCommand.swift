@@ -57,6 +57,13 @@ extension ESC_POSCommand {
         return ESC_POSCommand([27, 74, points])
     }
     
+    // Acrossor - Thomas: Manual Page 47: when cut code = 1 when feed = 0; otherwise, code = 66
+    // Feedpoint should not be 0, otherwise cut before line printing finish
+    static func cut(feedPoints:UInt8=70) -> ESC_POSCommand {
+        let partialCutCode:UInt8 = feedPoints == 0 ? 1 : 66
+        return ESC_POSCommand([29, 86, partialCutCode, feedPoints])
+    }
+    
     // Prints the data in the print buffer and feeds n lines in the reverse direction.
     static func printAndReverseFeed(lines: UInt8 = 1) -> ESC_POSCommand {
         return ESC_POSCommand([27, 101, lines])

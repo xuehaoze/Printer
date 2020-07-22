@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		14448891E632874F2045929569D816CC /* BluetoothPrinterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C22DFF0BA2DA7D13939325C45006F /* BluetoothPrinterManager.swift */; };
 		1CC61390448CDD037D10FB40427308EB /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99760A2EFA0126B5E440ED7D041B02A8 /* Image.swift */; };
+		2C0BAF0424A6A91E005B3439 /* Cut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0BAF0224A6A911005B3439 /* Cut.swift */; };
 		2F52AEC42262AF965C72BCDF8BCFCF4A /* BluetoothCentralManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF922B25C2D4042CD1642D6C33195BC0 /* BluetoothCentralManagerDelegate.swift */; };
 		337D70CE3F1C520631D319846FD0EF70 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0592B0D2958BD9F64B2F1976777EB5B /* Todo.swift */; };
 		3594CD1CF90D4F3C6D7629FF8E669C31 /* Blank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506D93C85016B4479CCE758EB53A7F4 /* Blank.swift */; };
@@ -46,9 +47,10 @@
 /* Begin PBXFileReference section */
 		173E816BF517C8831CCDBFC7E74DB5DE /* Printable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Printable.swift; sourceTree = "<group>"; };
 		1B9479B6967666A8B0D672B42D6E6A1B /* Block.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
-		1F667CC0E19EAF34E5A4119E2121F585 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example.framework; path = "Pods-Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F667CC0E19EAF34E5A4119E2121F585 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		243410B9535472556EA4BB6DBC133A0D /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		28D531173E987D095661FC81BD4E4ED7 /* Printer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Printer-Info.plist"; sourceTree = "<group>"; };
+		2C0BAF0224A6A911005B3439 /* Cut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cut.swift; sourceTree = "<group>"; };
 		2C8046152E5C3411FF61F4B7C1EDE738 /* Printer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Printer-dummy.m"; sourceTree = "<group>"; };
 		31C1D37707DFAA5E6A164BCC07834264 /* Pods-Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-Info.plist"; sourceTree = "<group>"; };
 		35C305D3797C284E6F5BAA1D3E6F9BF8 /* Pods-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Example.modulemap"; sourceTree = "<group>"; };
@@ -58,22 +60,22 @@
 		6288186A55261CC8E57A292AFCE0A643 /* Printer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Printer.xcconfig; sourceTree = "<group>"; };
 		6A2205F870104E44232FB28E08AB800A /* BluetoothPeripheralDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BluetoothPeripheralDelegate.swift; sourceTree = "<group>"; };
 		6AFFF56A1FDB2F59658881ECF994A6B9 /* Dividing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Dividing.swift; sourceTree = "<group>"; };
-		6EBBB9D47DF183C5935E26A4943B0029 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		6EBBB9D47DF183C5935E26A4943B0029 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		707C88B98AE9F301E0555648E114F63E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7825A90E082A1582EB16256B0E722B3F /* Pods-Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-umbrella.h"; sourceTree = "<group>"; };
-		7DB81C41F24093516D3AC8D9CF2FF971 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		7DB81C41F24093516D3AC8D9CF2FF971 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		83D6B55970792189C4EF8D06649BD043 /* QRCode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
 		917B45222476FC1C6D62FB34041E48E6 /* Printer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Printer.modulemap; sourceTree = "<group>"; };
 		98CFCC6688660E6331006766EC75DADF /* DummyPrinter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DummyPrinter.swift; sourceTree = "<group>"; };
 		99760A2EFA0126B5E440ED7D041B02A8 /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A76FBBC2AC4774A56DE32DA0F3071694 /* PrinterError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PrinterError.swift; sourceTree = "<group>"; };
 		AA5D1C01CAB536E1148ADCAF39F1518B /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
-		AA6AC14C0D328C26CE95E0D2D27D4D6E /* Printer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Printer.framework; path = Printer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA6AC14C0D328C26CE95E0D2D27D4D6E /* Printer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Printer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6C22DFF0BA2DA7D13939325C45006F /* BluetoothPrinterManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BluetoothPrinterManager.swift; sourceTree = "<group>"; };
 		AFECBC24E09D0D25F822C27BD944AFD4 /* Pods-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-frameworks.sh"; sourceTree = "<group>"; };
 		B45138496B85A072654D1D0F8EBBEDE5 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
-		C586E763DDEC4BFC7383243F205FB675 /* Printer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Printer.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C586E763DDEC4BFC7383243F205FB675 /* Printer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Printer.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		CCF9E4F7319DB454B91DDD0CA39E5C22 /* BluetoothPrinterSelectTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BluetoothPrinterSelectTableViewController.swift; sourceTree = "<group>"; };
 		D0592B0D2958BD9F64B2F1976777EB5B /* Todo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		D34DDDEE503DCF4823E0F061BA051D9D /* Text.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
@@ -112,7 +114,6 @@
 			children = (
 				98CFCC6688660E6331006766EC75DADF /* DummyPrinter.swift */,
 			);
-			name = Dummy;
 			path = Dummy;
 			sourceTree = "<group>";
 		};
@@ -128,6 +129,7 @@
 				D34DDDEE503DCF4823E0F061BA051D9D /* Text.swift */,
 				D6B6E09286FC632551CBB0D03541D38F /* Ticket.swift */,
 				D4AC9DDAF4105DE0131907B594CD784E /* TicketImage.swift */,
+				2C0BAF0224A6A911005B3439 /* Cut.swift */,
 			);
 			name = Ticket;
 			path = Printer/Source/Ticket;
@@ -253,7 +255,6 @@
 			children = (
 				D0592B0D2958BD9F64B2F1976777EB5B /* Todo.swift */,
 			);
-			name = Network;
 			path = Network;
 			sourceTree = "<group>";
 		};
@@ -278,7 +279,6 @@
 				AF6C22DFF0BA2DA7D13939325C45006F /* BluetoothPrinterManager.swift */,
 				CCF9E4F7319DB454B91DDD0CA39E5C22 /* BluetoothPrinterSelectTableViewController.swift */,
 			);
-			name = Bluetooth;
 			path = Bluetooth;
 			sourceTree = "<group>";
 		};
@@ -349,6 +349,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
+				TargetAttributes = {
+					0AEE99A309977BD12A049FF48AF9BA4B = {
+						LastSwiftMigration = 1140;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -409,6 +414,7 @@
 				F9DBF47F2DDE158C189D8B5F59C9A41D /* Ticket.swift in Sources */,
 				A32D508CFA6F9F5C45D72547222E43D2 /* TicketImage.swift in Sources */,
 				337D70CE3F1C520631D319846FD0EF70 /* Todo.swift in Sources */,
+				2C0BAF0424A6A91E005B3439 /* Cut.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +474,7 @@
 			baseConfigurationReference = B45138496B85A072654D1D0F8EBBEDE5 /* Pods-Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -490,6 +497,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -501,6 +510,7 @@
 			baseConfigurationReference = 243410B9535472556EA4BB6DBC133A0D /* Pods-Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -523,6 +533,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -583,8 +594,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
