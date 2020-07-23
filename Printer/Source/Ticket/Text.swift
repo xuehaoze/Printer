@@ -51,6 +51,7 @@ public extension Text {
         
         case alignment(NSTextAlignment)
         case bold
+        case unbold
         case small
         case light
         case scale(ScaleLevel)
@@ -62,6 +63,8 @@ public extension Text {
                 return ESC_POSCommand.justification(v == .left ? 0 : v == .center ? 1 : 2).rawValue
             case .bold:
                 return ESC_POSCommand.emphasize(mode: true).rawValue
+            case .unbold:
+                return ESC_POSCommand.emphasize(mode: false).rawValue
             case .small:
                 return ESC_POSCommand.font(1).rawValue
             case .light:

@@ -25,13 +25,23 @@ public struct Block: Printable {
     private let feedPoints: UInt8
     private let dataProvider: BlockDataProvider
     
-    public init(_ dataProvider: BlockDataProvider, feedPoints: UInt8 = Block.defaultFeedPoints) {
+    /// Acrossor - Thomas: immediatePrint is a boolean value that indicate wether the content of this block should be printed immediately
+    /// Default value is true, block will be print in a single line
+    let immediatePrint:Bool
+    
+    public init(_ dataProvider: BlockDataProvider, feedPoints: UInt8 = Block.defaultFeedPoints, immediatePrint:Bool=true) {
         self.feedPoints = feedPoints
         self.dataProvider = dataProvider
+        self.immediatePrint = immediatePrint
     }
     
+    /// Acrossor - Thomas: If immediatePrint = false, means continue printing is required, so eliminate the trailing print command
     public func data(using encoding: String.Encoding) -> Data {
-        return dataProvider.data(using: encoding) + Data.print(feedPoints)
+        var returnData = dataProvider.data(using: encoding)
+        if immediatePrint {
+            returnData += Data.print(feedPoints)
+        }
+        return  returnData
     }
 }
 
@@ -39,7 +49,11 @@ public extension Block {
     // blank line
     static var blank = Block(Blank())
     
-    static var cut = Block(Cut())
+    /// Acrossor - Thomas: cut command to cut the paper
+    static let cut = Block(Cut())
+    
+    /// Acrossor - Thomas: Print and clear existing buffer with default feed. Must be called after each continue printing
+    static let printAndClearBuffer = Block(PrintAndClearBuffer(), immediatePrint: false)
     
     static func blank(_ line: UInt8) -> Block {
         return Block(Blank(), feedPoints: Block.defaultFeedPoints * line)
@@ -60,8 +74,8 @@ public extension Block {
         return Block(Text.init(content))
     }
     
-    static func text(_ text: Text) -> Block {
-        return Block(text)
+    static func text(_ text: Text, immediatePrint:Bool=true) -> Block {
+        return Block(text, immediatePrint: immediatePrint)
     }
     
     // key    value

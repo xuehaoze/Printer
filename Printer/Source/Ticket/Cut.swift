@@ -2,7 +2,7 @@
 //  Cut.swift
 //  Pods-Example
 //
-//  Created by Thomas Xue on 2020-06-26.
+//  Created by Acrossor - Thomas Xue on 2020-06-26.
 //
 
 import Foundation

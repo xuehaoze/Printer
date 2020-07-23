@@ -22,33 +22,35 @@ class ViewController: UIViewController {
         }
 
         var ticket = Ticket(
-            .blank,
-            .title("Restaurant"),
-            .blank,
-            
-            .plainText("Palo Alto Californlia 94301"),
-            .plainText("378-0987893742"),
-            .blank,
-            .image(image, attributes: .alignment(.center)),
-            .text(.init(content: Date().description, predefined: .alignment(.center))),
-            .blank,
-            .kv(k: "Merchant ID:", v: "iceu1390"),
-            .kv(k: "Terminal ID:", v: "29383"),
-            .blank,
-            .kv(k: "Transaction ID:", v: "0x000321"),
-            .plainText("PURCHASE"),
-            .blank,
-            .kv(k: "Sub Total", v: "USD$ 25.09"),
-            .kv(k: "Tip", v: "3.78"),
-            .dividing,
-            .kv(k: "Total", v: "USD$ 28.87"),
-            .blank(3),
-            Block(Text(content: "Thanks for supporting", predefined: .alignment(.center))),
+//            .blank,
+//            .title("Restaurant"),
+//            .blank,
+//
+//            .plainText("Palo Alto Californlia 94301"),
+//            .plainText("378-0987893742"),
+//            .blank,
+//            .image(image, attributes: .alignment(.center)),
+            .text(.init(content: "123", predefined: .alignment(.center), .bold), immediatePrint: false),
+            .text(.init(content: "abc"), immediatePrint: false),
+            .printAndClearBuffer,
+//            .blank,
+//            .kv(k: "Merchant ID:", v: "iceu1390"),
+//            .kv(k: "Terminal ID:", v: "29383"),
+//            .blank,
+//            .kv(k: "Transaction ID:", v: "0x000321"),
+//            .plainText("PURCHASE"),
+//            .blank,
+//            .kv(k: "Sub Total", v: "USD$ 25.09"),
+//            .kv(k: "Tip", v: "3.78"),
+//            .dividing,
+//            .kv(k: "Total", v: "USD$ 28.87"),
+//            .blank(3),
+//            Block(Text(content: "Thanks for supporting", predefined: .alignment(.center))),
             .cut
         )
         
         ticket.feedLinesOnHead = 0
-        ticket.feedLinesOnTail = 0
+        ticket.feedLinesOnTail = 3
         
         if bluetoothPrinterManager.canPrint {
             bluetoothPrinterManager.print(ticket)
