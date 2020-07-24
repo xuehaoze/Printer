@@ -40,13 +40,25 @@ public struct ESC_POSCommand: RawRepresentable {
     }
 }
 
-// ref: http://content.epson.de/fileadmin/content/files/RSD/downloads/escpos.pdf
+// ref: https://reference.epson-biz.com/modules/ref_escpos/
 
 //Control Commands
 extension ESC_POSCommand {
     
     // Clears the data in the print buffer and resets the printer modes to the modes that were in effect when the power was turned on.
     static let initialize = ESC_POSCommand(rawValue: [27, 64])
+    
+    /// Acrossor - Thomas: Manual Page 47: when cut code = 1 when feed = 0; otherwise, code = 66
+    /// Feedpoint should not be 0, otherwise cut before line printing finish
+    static func cut(feedPoints:UInt8=70) -> ESC_POSCommand {
+        let partialCutCode:UInt8 = feedPoints == 0 ? 1 : 66
+        return ESC_POSCommand([29, 86, partialCutCode, feedPoints])
+    }
+    
+    /// Acrossor - Thomas: Manual Page 3: command HT
+    static func indentWithTab() -> ESC_POSCommand {
+        return ESC_POSCommand([9])
+    }
     
     // Prints the data in the print buffer and feeds n lines.
     static func printAndFeed(lines: UInt8 = 1) -> ESC_POSCommand {
@@ -55,13 +67,6 @@ extension ESC_POSCommand {
     
     static func feed(points: UInt8) -> ESC_POSCommand {
         return ESC_POSCommand([27, 74, points])
-    }
-    
-    // Acrossor - Thomas: Manual Page 47: when cut code = 1 when feed = 0; otherwise, code = 66
-    // Feedpoint should not be 0, otherwise cut before line printing finish
-    static func cut(feedPoints:UInt8=70) -> ESC_POSCommand {
-        let partialCutCode:UInt8 = feedPoints == 0 ? 1 : 66
-        return ESC_POSCommand([29, 86, partialCutCode, feedPoints])
     }
     
     // Prints the data in the print buffer and feeds n lines in the reverse direction.

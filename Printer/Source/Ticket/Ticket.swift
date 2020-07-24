@@ -23,6 +23,11 @@ public struct Ticket {
         blocks.append(block)
     }
     
+    /// Acrossor - Thomas: batch edit for blocks in Ticket
+    public mutating func add(blocks: [Block]) {
+        self.blocks.append(contentsOf: blocks)
+    }
+    
     /// Acrossor - Thomas: Each Block in the ticket will be converted into a data. The data contains three parts:
     /// 1. initial (data.reset) command, to clear printer buffer and reset printer start point and settings for each line.
     /// 2. content, actual content of each block in data format.

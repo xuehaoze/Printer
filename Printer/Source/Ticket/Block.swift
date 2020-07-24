@@ -46,14 +46,25 @@ public struct Block: Printable {
 }
 
 public extension Block {
-    // blank line
-    static var blank = Block(Blank())
-    
     /// Acrossor - Thomas: cut command to cut the paper
     static let cut = Block(Cut())
     
     /// Acrossor - Thomas: Print and clear existing buffer with default feed. Must be called after each continue printing
     static let printAndClearBuffer = Block(PrintAndClearBuffer(), immediatePrint: false)
+    
+    /// Acrossor - Thomas: Draw a full-width dividing line using character.
+    static func fullWidthDivider(dividingChar:Character="-") -> Block {
+        return Block(Text.fullWidthDivider(dividingChar: dividingChar))
+    }
+    
+    /// Acrossor - Thomas: Indent starting point by x tabs
+    static func tabIndent(step:Int=1) -> Block {
+        return Block(TabIndent(step: step), immediatePrint: false)
+    }
+    
+    
+    // blank line
+    static var blank = Block(Blank())
     
     static func blank(_ line: UInt8) -> Block {
         return Block(Blank(), feedPoints: Block.defaultFeedPoints * line)
@@ -82,9 +93,6 @@ public extension Block {
     static func kv(k: String, v: String) -> Block {
         return Block(Text.kv(k: k, v: v))
     }
-    
-    // dividing
-    static var dividing = Block(Dividing.default)
     
     // image
     static func image(_ im: Image, attributes: TicketImage.PredefinedAttribute...) -> Block {

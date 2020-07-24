@@ -1,6 +1,6 @@
 //
-//  Cut.swift
-//  Pods-Example
+//  PrintAndClearBuffer.swift
+//  Printer
 //
 //  Created by Acrossor - Thomas Xue on 2020-06-26.
 //

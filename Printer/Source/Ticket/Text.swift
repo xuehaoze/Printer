@@ -9,13 +9,16 @@
 import Foundation
 
 public struct Text: BlockDataProvider {
+    let paperStyle:ReceiptPaperStyle
     
     let content: String
     let attributes: [Attribute]?
     
-    public init(_ content: String, attributes: [Attribute]? = nil) {
+    public init(_ content: String, attributes: [Attribute]? = nil, paperStyle:ReceiptPaperStyle = .width80) {
         self.content = content
         self.attributes = attributes
+        
+        self.paperStyle = paperStyle
     }
     
     public func data(using encoding: String.Encoding) -> Data {
@@ -91,12 +94,22 @@ public extension Text {
         return Text(content: content, predefined: .scale(.l1), .alignment(.center))
     }
     
+    /// Acrossor - Thomas: Helper init for full width divider line
+    static func fullWidthDivider(dividingChar:Character = "-", paperSyle:ReceiptPaperStyle = .width80) -> Text {
+        let repeatCount = paperSyle.getWidthInChar
+        let dividerStr = String(repeating: dividingChar, count: repeatCount)
+        return Text(content: dividerStr, predefined: .alignment(.center))
+    }
+    
     static func kv(printDensity: Int = 384, fontDensity: Int = 12, k: String, v: String, attributes: [Attribute]? = nil) -> Text {
         
         var num = printDensity / fontDensity
         
         let string = k + v
         
+        // Acrossor - Thomas: we calculate how many space need to be insert in between.
+        // Calculation: number of space = page width in char (48 chars for 80mm, 32 chars for 58mm) - num of char in string
+        // NOTE: for char between "\u{2E80}" and "\u{FE4F}", they are chinese chars, which take 2 char space.
         for c in string {
             if (c >= "\u{2E80}" && c <= "\u{FE4F}") || c == "\u{FFE5}"{
                 num -= 2

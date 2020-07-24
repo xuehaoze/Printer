@@ -1,6 +1,6 @@
 //
 //  Cut.swift
-//  Pods-Example
+//  Printer
 //
 //  Created by Acrossor - Thomas Xue on 2020-06-26.
 //
