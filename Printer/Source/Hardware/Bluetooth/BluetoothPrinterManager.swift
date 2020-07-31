@@ -290,8 +290,8 @@ public class BluetoothPrinterManager {
         }
 
         for data in content.data(using: encoding) {
-
-            p.writeValue(data, for: c, type: .withoutResponse)
+//            p.writeValue(data, for: c, type: .withoutResponse)
+            p.writeValue(data, for: c, type: .withResponse)
         }
 
         completeBlock?(nil)

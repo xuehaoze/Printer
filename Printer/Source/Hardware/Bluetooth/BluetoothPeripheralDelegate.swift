@@ -70,4 +70,14 @@ class BluetoothPeripheralDelegate: NSObject, CBPeripheralDelegate {
 
         print(characteristic)
     }
+    
+    public func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
+        //        print(characteristic)
+        //        print(error)
+    }
+    
+    public func peripheral(_ peripheral: CBPeripheral, didWriteValueFor descriptor: CBDescriptor, error: Error?) {
+        //        print(descriptor)
+        //        print(error)
+    }
 }
