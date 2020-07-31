@@ -20,8 +20,8 @@ extension Data {
         return Data(esc_pos: .initialize)
     }
     
-    static func print(_ feed: UInt8) -> Data {
-        return Data(esc_pos: .feed(points: feed))
+    static func printAndFeed(points: UInt8) -> Data {
+        return Data(esc_pos: .printAndFeedBy(points: points))
     }
 }
 
@@ -61,11 +61,11 @@ extension ESC_POSCommand {
     }
     
     // Prints the data in the print buffer and feeds n lines.
-    static func printAndFeed(lines: UInt8 = 1) -> ESC_POSCommand {
+    static func printAndFeedBy(lines: UInt8 = 1) -> ESC_POSCommand {
         return ESC_POSCommand([27, 100, lines])
     }
     
-    static func feed(points: UInt8) -> ESC_POSCommand {
+    static func printAndFeedBy(points: UInt8) -> ESC_POSCommand {
         return ESC_POSCommand([27, 74, points])
     }
     

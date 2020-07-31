@@ -39,10 +39,15 @@ public struct Block: Printable {
     public func data(using encoding: String.Encoding) -> Data {
         var returnData = dataProvider.data(using: encoding)
         if immediatePrint {
-            returnData += Data.print(feedPoints)
+            returnData += Data.printAndFeed(points: feedPoints)
         }
         return  returnData
     }
+}
+
+/// Acrossor - Thomas: Preset type for block blank function
+public enum BlockBlankType {
+    case full, half
 }
 
 public extension Block {
@@ -62,13 +67,22 @@ public extension Block {
         return Block(TabIndent(step: step), immediatePrint: false)
     }
     
-    
-    // blank line
-    static var blank = Block(Blank())
-    
-    static func blank(_ line: UInt8) -> Block {
-        return Block(Blank(), feedPoints: Block.defaultFeedPoints * line)
+    /// Acrossor - Thomas: user can feed any points by giving blank type and repeat times
+    static func blank(type: BlockBlankType = .full, repeated:UInt8 = 1) -> Block {
+        var feedPoints:UInt8 = 0
+        switch type {
+        case .full:
+            feedPoints = Block.defaultFeedPoints
+        case .half:
+            feedPoints = Block.defaultFeedPoints/2
+        }
+        
+        if repeated > 1 {
+            feedPoints *= repeated
+        }
+        return Block(Blank(), feedPoints: feedPoints)
     }
+    
     
     // qr
     static func qr(_ content: String) -> Block {

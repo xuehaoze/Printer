@@ -35,7 +35,7 @@ class ViewController: UIViewController {
             .text(.init(content: "abc", predefined: .alignment(.left), .unbold), immediatePrint: false),
             .printAndClearBuffer,
             .fullWidthDivider(),
-            .text(.init(content: "123456789*123456789*123456789*123456789*12345678", predefined: .alignment(.left), .unbold), immediatePrint: true)
+            .text(.init(content: "123456789*123456789*123456789*123456789*12345678", predefined: .alignment(.left), .unbold), immediatePrint: true),
 //            .blank,
 //            .kv(k: "Merchant ID:", v: "iceu1390"),
 //            .kv(k: "Terminal ID:", v: "29383"),
@@ -49,14 +49,19 @@ class ViewController: UIViewController {
 //            .kv(k: "Total", v: "USD$ 28.87"),
 //            .blank(3),
 //            Block(Text(content: "Thanks for supporting", predefined: .alignment(.center))),
-            
+            .blank(),
+            .plainText("full blank testing (above)"),
+            .blank(type: .half),
+            .plainText("half blank testing (above)"),
+            .blank(type: .full, repeated: 3),
+            .plainText("3 blanks testing (above)")
         )
         
-        ticket.add(blocks: lineStyleFormat())
-        ticket.add(blocks: lineStyleFormat())
+//        ticket.add(blocks: lineStyleFormat())
+//        ticket.add(blocks: lineStyleFormat())
         ticket.add(block: .cut)
         ticket.feedLinesOnHead = 0
-        ticket.feedLinesOnTail = 3
+        ticket.feedLinesOnTail = 0
         
         if bluetoothPrinterManager.canPrint {
             bluetoothPrinterManager.print(ticket)

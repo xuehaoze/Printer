@@ -58,7 +58,6 @@ public extension Text {
         case small
         case light
         case scale(ScaleLevel)
-        case feed(UInt8)
         
         public var attribute: [UInt8] {
             switch self {
@@ -74,8 +73,6 @@ public extension Text {
                 return ESC_POSCommand.color(n: 1).rawValue
             case let .scale(v):
                 return [0x1D, 0x21, v.rawValue]
-            case let .feed(v):
-                return ESC_POSCommand.feed(points: v).rawValue
             }
         }
     }

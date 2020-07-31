@@ -12,6 +12,6 @@ import Foundation
 /// This producedure is: print and feed command + clear buffer command
 struct PrintAndClearBuffer: BlockDataProvider {
     func data(using encoding: String.Encoding) -> Data {
-        return Data.print(Block.defaultFeedPoints) + Data.reset
+        return Data.printAndFeed(points: Block.defaultFeedPoints) + Data.reset
     }
 }

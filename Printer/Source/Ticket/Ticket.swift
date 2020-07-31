@@ -44,11 +44,11 @@ public struct Ticket {
         }
         
         if feedLinesOnHead > 0 {
-            ds.insert(Data(esc_pos: .printAndFeed(lines: feedLinesOnHead)), at: 0)
+            ds.insert(Data(esc_pos: .printAndFeedBy(lines: feedLinesOnHead)), at: 0)
         }
         
         if feedLinesOnTail > 0 {
-            ds.append(Data(esc_pos: .printAndFeed(lines: feedLinesOnTail)))
+            ds.append(Data(esc_pos: .printAndFeedBy(lines: feedLinesOnTail)))
         }
         
         return ds
