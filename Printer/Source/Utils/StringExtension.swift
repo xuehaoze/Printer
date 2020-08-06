@@ -9,7 +9,7 @@ import Foundation
 
 
 //MARK: - String extension
-extension String {
+public extension String {
     /**
      Acrossor - Thomas:
      Split string into an array of substrings with each length of substrs equals to the given char length.
