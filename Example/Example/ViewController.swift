@@ -29,7 +29,7 @@ class ViewController: UIViewController {
 //            .plainText("Palo Alto Californlia 94301"),
 //            .plainText("378-0987893742"),
 //            .blank,
-//            .image(image, attributes: .alignment(.center)),
+            .image(image, attributes: .alignment(.center)),
             .text(.init(content: "123", predefined: .alignment(.center), .bold), immediatePrint: false),
             .tabIndent(),
             .text(.init(content: "abc", predefined: .alignment(.left), .unbold), immediatePrint: false),

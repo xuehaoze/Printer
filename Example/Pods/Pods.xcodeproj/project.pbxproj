@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		00BCEA573E4AE0BD1AD564DC5EF3F29C /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FD99E10F5D2FE315C361D6CDEA4B3B /* Todo.swift */; };
 		07BA310FB99D8E0049ED5E06CD4CF735 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B349FACC32BF5FB3D637074678A49F /* Block.swift */; };
+		2CD7584E24DBB3470006D479 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD7584D24DBB3470006D479 /* StringExtension.swift */; };
 		3100B8FA495CFE8FBE5EFBA4E91C665D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1D872117F9219BD837479708E9EE8B /* Image.swift */; };
 		4B63C229787C6EE9229F5D682822E388 /* PrinterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA03E6E40F625EECDB57BEFAAF36055 /* PrinterError.swift */; };
 		5769F16120486CA4EB59C92A45317B60 /* PrintAndClearBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF36BC9CBC11D975CE49800DC7CDCC /* PrintAndClearBuffer.swift */; };
@@ -49,8 +50,9 @@
 /* Begin PBXFileReference section */
 		0F161724D14C13A0AFB877C4D02D2230 /* Text.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		1752237D38E94CA6909D54D87894AB58 /* Printer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Printer-umbrella.h"; sourceTree = "<group>"; };
-		1F667CC0E19EAF34E5A4119E2121F585 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example.framework; path = "Pods-Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F667CC0E19EAF34E5A4119E2121F585 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		243410B9535472556EA4BB6DBC133A0D /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
+		2CD7584D24DBB3470006D479 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		31C1D37707DFAA5E6A164BCC07834264 /* Pods-Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-Info.plist"; sourceTree = "<group>"; };
 		35C305D3797C284E6F5BAA1D3E6F9BF8 /* Pods-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Example.modulemap"; sourceTree = "<group>"; };
 		3A053CADD7C482727C4ECDE09AE967D1 /* BluetoothCentralManagerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BluetoothCentralManagerDelegate.swift; sourceTree = "<group>"; };
@@ -61,26 +63,26 @@
 		4787CB2B6BE28122550E6F30FC0729D0 /* BluetoothPrinterManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BluetoothPrinterManager.swift; sourceTree = "<group>"; };
 		49FD99E10F5D2FE315C361D6CDEA4B3B /* Todo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		4E67AE3FC5A5C095DFCEB03AC966A677 /* Printable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Printable.swift; sourceTree = "<group>"; };
-		5A7C1F3F93CB3FADCBDB50F1F2926C5E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		5A7C1F3F93CB3FADCBDB50F1F2926C5E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6FB6E7CF2A7A0B6DFD6E976559E15EBE /* BluetoothPrinterSelectTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BluetoothPrinterSelectTableViewController.swift; sourceTree = "<group>"; };
 		707C88B98AE9F301E0555648E114F63E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		70FFEB51C64C1D177739159CE72C7993 /* ReceiptPaperStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReceiptPaperStyle.swift; sourceTree = "<group>"; };
 		7825A90E082A1582EB16256B0E722B3F /* Pods-Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-umbrella.h"; sourceTree = "<group>"; };
 		7DD15BEB325D1B0CCCD4C670AD602D03 /* QRCode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
 		84807DB30705B523F0DB2BAFAAE2587B /* Cut.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Cut.swift; sourceTree = "<group>"; };
-		8BC8AA76104015325012964AE54FC7BA /* Printer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Printer.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8BC8AA76104015325012964AE54FC7BA /* Printer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Printer.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8C33BAF873BC0A1152D1F81D613E0E22 /* Printer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Printer-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A822CD4805A24E7206DFA15350F8FBCC /* Ticket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		A8A24C8FB78DDCCFF41EB44637F2D023 /* Printer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Printer-Info.plist"; sourceTree = "<group>"; };
 		AA5D1C01CAB536E1148ADCAF39F1518B /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
-		AA6AC14C0D328C26CE95E0D2D27D4D6E /* Printer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Printer.framework; path = Printer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA6AC14C0D328C26CE95E0D2D27D4D6E /* Printer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Printer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFECBC24E09D0D25F822C27BD944AFD4 /* Pods-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-frameworks.sh"; sourceTree = "<group>"; };
 		B45138496B85A072654D1D0F8EBBEDE5 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B5EEBE9B620E5D1645283B4F3A2F7782 /* TabIndent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabIndent.swift; sourceTree = "<group>"; };
 		BB07509B470B1FCB819CAFB2CEE354D2 /* BluetoothPeripheralDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BluetoothPeripheralDelegate.swift; sourceTree = "<group>"; };
 		C0B349FACC32BF5FB3D637074678A49F /* Block.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
-		C31D8039683CA8DE7835E4495067A826 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		C31D8039683CA8DE7835E4495067A826 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C8121B88DC36475F107DC249D75E02E4 /* Printer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Printer-prefix.pch"; sourceTree = "<group>"; };
 		D2821F3DD4F53D4BAA957C08E927D6A5 /* TicketImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TicketImage.swift; sourceTree = "<group>"; };
 		D6CF36BC9CBC11D975CE49800DC7CDCC /* PrintAndClearBuffer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PrintAndClearBuffer.swift; sourceTree = "<group>"; };
@@ -119,7 +121,6 @@
 			children = (
 				EBD044928805589B24B9766FD347D034 /* DummyPrinter.swift */,
 			);
-			name = Dummy;
 			path = Dummy;
 			sourceTree = "<group>";
 		};
@@ -158,7 +159,6 @@
 				4787CB2B6BE28122550E6F30FC0729D0 /* BluetoothPrinterManager.swift */,
 				6FB6E7CF2A7A0B6DFD6E976559E15EBE /* BluetoothPrinterSelectTableViewController.swift */,
 			);
-			name = Bluetooth;
 			path = Bluetooth;
 			sourceTree = "<group>";
 		};
@@ -184,7 +184,6 @@
 			children = (
 				49FD99E10F5D2FE315C361D6CDEA4B3B /* Todo.swift */,
 			);
-			name = Network;
 			path = Network;
 			sourceTree = "<group>";
 		};
@@ -288,6 +287,7 @@
 				4E67AE3FC5A5C095DFCEB03AC966A677 /* Printable.swift */,
 				3EA03E6E40F625EECDB57BEFAAF36055 /* PrinterError.swift */,
 				70FFEB51C64C1D177739159CE72C7993 /* ReceiptPaperStyle.swift */,
+				2CD7584D24DBB3470006D479 /* StringExtension.swift */,
 			);
 			name = Utils;
 			path = Printer/Source/Utils;
@@ -422,6 +422,7 @@
 				87905617E1D89B0CB755A631C60DFD00 /* Text.swift in Sources */,
 				96CD3E6F522F285ED1F80500C6D1577F /* Ticket.swift in Sources */,
 				8A368D446AD7300EA3F8FFC76E37D2DA /* TicketImage.swift in Sources */,
+				2CD7584E24DBB3470006D479 /* StringExtension.swift in Sources */,
 				00BCEA573E4AE0BD1AD564DC5EF3F29C /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -597,8 +598,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

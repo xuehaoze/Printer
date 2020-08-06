@@ -108,7 +108,7 @@ public extension Block {
         return Block(Text.kv(k: k, v: v))
     }
     
-    // image
+    /// Acrossor - Thomas: exsiting bug. Image width has to be multiple of 8
     static func image(_ im: Image, attributes: TicketImage.PredefinedAttribute...) -> Block {
         return Block(TicketImage(im, attributes: attributes))
     }
