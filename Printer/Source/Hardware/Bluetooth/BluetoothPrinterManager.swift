@@ -73,6 +73,7 @@ public enum NearbyPrinterChange {
 
 public protocol PrinterManagerDelegate: NSObjectProtocol {
 
+    func bluetoothPowerStateDidChange(_ isPoweredOn:Bool)
     func nearbyPrinterDidChange(_ change: NearbyPrinterChange)
 }
 
@@ -151,9 +152,11 @@ public class BluetoothPrinterManager {
 
             guard $0.state == .poweredOn else {
                 self.isBluetoothPowerOn = false
+                self.bluetoothPowerStateDidChange(false)
                 return
             }
             self.isBluetoothPowerOn = true
+            self.bluetoothPowerStateDidChange(true)
             if let error = self.startScan() {
                 self.errorReport?(error)
             }
@@ -180,6 +183,12 @@ public class BluetoothPrinterManager {
             }
 
             self.errorReport?(.connectFailed)
+        }
+    }
+    
+    private func bluetoothPowerStateDidChange(_ isPowerOn: Bool) {
+        DispatchQueue.main.async { [weak self] in
+            self?.delegate?.bluetoothPowerStateDidChange(isPowerOn)
         }
     }
 

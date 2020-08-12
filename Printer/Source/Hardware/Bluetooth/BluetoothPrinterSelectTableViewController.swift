@@ -83,6 +83,11 @@ public class BluetoothPrinterSelectTableViewController: UITableViewController {
 }
 
 extension BluetoothPrinterSelectTableViewController: PrinterManagerDelegate {
+    
+    public func bluetoothPowerStateDidChange(_ isPoweredOn: Bool) {
+        let isOn = isPoweredOn ? "ON" : "OFF"
+        print("Bluetooth is powered \(isOn)")
+    }
 
     public func nearbyPrinterDidChange(_ change: NearbyPrinterChange) {
 
