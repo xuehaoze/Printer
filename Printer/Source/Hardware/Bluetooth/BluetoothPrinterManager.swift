@@ -100,6 +100,8 @@ public class BluetoothPrinterManager {
     public var nearbyPrinters: [BluetoothPrinter] {
         return centralManagerDelegate.discoveredPeripherals.values.map { BluetoothPrinter($0) }
     }
+    
+    public var isBluetoothPowerOn:Bool = false
 
     public init(delegate: PrinterManagerDelegate? = nil) {
 
@@ -148,8 +150,10 @@ public class BluetoothPrinterManager {
             }
 
             guard $0.state == .poweredOn else {
+                self.isBluetoothPowerOn = false
                 return
             }
+            self.isBluetoothPowerOn = true
             if let error = self.startScan() {
                 self.errorReport?(error)
             }
@@ -274,7 +278,7 @@ public class BluetoothPrinterManager {
     }
 
     public var canPrint: Bool {
-        if peripheralDelegate.writablecharacteristic == nil || peripheralDelegate.writablePeripheral == nil {
+        if !isBluetoothPowerOn || peripheralDelegate.writablecharacteristic == nil || peripheralDelegate.writablePeripheral == nil {
             return false
         } else {
             return true

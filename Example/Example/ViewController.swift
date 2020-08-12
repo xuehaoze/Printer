@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         guard let image = UIImage(named: "receipt_logo") else {
             return
         }
-        
+        let url = "myfod.ca"
         var ticket = Ticket(
 //            .blank,
 //            .title("Restaurant"),
@@ -36,6 +36,7 @@ class ViewController: UIViewController {
             .printAndClearBuffer,
             .fullWidthDivider(),
             .text(.init(content: "123456789*123456789*123456789*123456789*12345678", predefined: .alignment(.left), .unbold), immediatePrint: true),
+            .qr(url),
 //            .blank,
 //            .kv(k: "Merchant ID:", v: "iceu1390"),
 //            .kv(k: "Terminal ID:", v: "29383"),
